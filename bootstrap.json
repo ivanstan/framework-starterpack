@@ -1,0 +1,16 @@
+{
+  "modules": {
+    "example": {
+      "settings": {}
+    }
+  },
+  "viewSelector": "#container",
+  "libs": [
+    {
+      "name": "example-application",
+      "scss": [
+        "module/example/example.scss"
+      ]
+    }
+  ]
+}

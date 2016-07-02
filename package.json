@@ -1,0 +1,34 @@
+{
+  "name": "frontend-framework",
+  "version": "1.0.0",
+  "description": "Frontend Framework",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "any-promise": "^1.3.0",
+    "bluebird": "^3.4.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.7",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-jsduck": "^0.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace-task": "^0.11.0",
+    "gulp-sass": "^2.3.1",
+    "stream-series": "^0.1.1"
+  },
+  "scripts": {
+    "install": "gulp build",
+    "test": "node_modules/karma/bin/karma start tests/karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanstan/frontend-framework"
+  },
+  "author": "Ivan Stanojevic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanstan/frontend-framework/issues"
+  },
+  "homepage": "https://github.com/ivanstan/frontend-framework"
+}
