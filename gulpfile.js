@@ -34,19 +34,19 @@ gulp.task('styles', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('styles.css'))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./assets'));
+        .pipe(gulp.dest('./build'));
 });
 
 gulp.task('js', function () {
     gulp.src(sourceJs)
         .pipe(concat('javascript.js'))
-        .pipe(gulp.dest('./assets'));
+        .pipe(gulp.dest('./build'));
 });
 
 gulp.task('development', function () {
 
     gulp.src('assets/index.html')
-        .pipe(inject(gulp.src(sourceJs.concat(['assets/styles.css']), {read: false}), {
+        .pipe(inject(gulp.src(sourceJs.concat(['build/styles.css']), {read: false}), {
             relative: false,
             addRootSlash: false
         }))
@@ -70,7 +70,7 @@ gulp.task('development', function () {
 gulp.task('production', function () {
 
     gulp.src('assets/index.html')
-        .pipe(inject(gulp.src(['build/frontend-framework-1.0.0.js', 'assets/javascript.js', 'assets/styles.css'], {read: false}), {
+        .pipe(inject(gulp.src(['build/frontend-framework-1.0.0.js', 'build/javascript.js', 'build/styles.css'], {read: false}), {
             relative: false,
             addRootSlash: false
         }))
